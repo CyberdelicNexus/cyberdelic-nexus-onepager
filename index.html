@@ -195,7 +195,6 @@
   .ic svg{width:22px;height:22px;}
 
   /* ---------- category cards ---------- */
-  .cat{display:flex;flex-direction:column;gap:4px;}
   .cat::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
     background:linear-gradient(90deg,var(--ac),transparent);}
   .cat .ic{background:color-mix(in srgb,var(--ac) 17%,transparent);
@@ -206,17 +205,17 @@
   .chip{font-size:.76rem;font-weight:500;padding:6px 12px;border-radius:999px;
     background:color-mix(in srgb,var(--ac) 14%,transparent);
     border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);color:#f3eefc;}
-  .usecase{margin-top:auto;padding:14px 16px;border-radius:13px;
-    background:color-mix(in srgb,var(--ac) 10%,rgba(0,0,0,.28));
-    border:1px solid color-mix(in srgb,var(--ac) 28%,transparent);}
-  .usecase .ulabel{font-size:.62rem;letter-spacing:.22em;font-weight:700;
-    color:var(--ac);text-transform:uppercase;margin-bottom:10px;opacity:.9;}
+  .usecase{margin-top:18px;padding:13px 15px;border-radius:13px;
+    background:color-mix(in srgb,var(--ac) 9%,rgba(0,0,0,.22));
+    border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);}
+  .usecase .ulabel{font-size:.63rem;letter-spacing:.2em;font-weight:700;
+    color:var(--ac);text-transform:uppercase;margin-bottom:9px;}
   .chips.plain .chip{
-    background:color-mix(in srgb,var(--ac) 18%,rgba(0,0,0,.2));
-    border-color:color-mix(in srgb,var(--ac) 44%,transparent);
-    color:#fff;font-weight:600;}
+    background:color-mix(in srgb,var(--ac) 16%,transparent);
+    border-color:color-mix(in srgb,var(--ac) 38%,transparent);
+    color:#f3eefc;font-weight:500;}
   .chips.plain .chip:hover{
-    background:color-mix(in srgb,var(--ac) 32%,transparent);}
+    background:color-mix(in srgb,var(--ac) 28%,transparent);}
 
   /* ---------- packages ---------- */
   .pkg{display:flex;flex-direction:column;}
