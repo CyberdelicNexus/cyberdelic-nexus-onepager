@@ -195,31 +195,25 @@
   .ic svg{width:22px;height:22px;}
 
   /* ---------- category cards ---------- */
-  .cat::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
-    background:linear-gradient(90deg,var(--ac),transparent);}
-  .cat .ic{background:color-mix(in srgb,var(--ac) 17%,transparent);
-    border-color:color-mix(in srgb,var(--ac) 42%,transparent);}
-  .cat .ic svg{stroke:var(--ac);}
-  .cat h3{color:var(--ac);}
-  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
-  .chip{font-size:.76rem;font-weight:500;padding:6px 12px;border-radius:999px;
-    background:color-mix(in srgb,var(--ac) 14%,transparent);
-    border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);color:#f3eefc;}
-  .usecase{margin-top:18px;padding:13px 15px;border-radius:13px;
-    background:color-mix(in srgb,var(--ac) 9%,rgba(0,0,0,.22));
-    border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);}
-  .usecase .ulabel{font-size:.63rem;letter-spacing:.2em;font-weight:700;
-    color:var(--ac);text-transform:uppercase;margin-bottom:9px;}
-  .chips.plain .chip{
-    background:color-mix(in srgb,var(--ac) 16%,transparent);
-    border-color:color-mix(in srgb,var(--ac) 38%,transparent);
-    color:#f3eefc;font-weight:500;}
-  .chips.plain .chip:hover{
-    background:color-mix(in srgb,var(--ac) 28%,transparent);}
-
-  /* ---------- category cards – equal height ---------- */
   #offer .grid{align-items:stretch;}
-  .card.cat{display:flex;flex-direction:column;}
+  .card.cat{display:flex;flex-direction:column;gap:0;padding:28px;}
+  /* no top bar, no accent header */
+  .cat .ic{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);margin-bottom:20px;}
+  .cat .ic svg{stroke:rgba(255,255,255,.7);}
+  .cat h3{color:var(--text);font-size:1.08rem;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;}
+  .cat>p{color:var(--muted);font-size:.92rem;font-weight:300;line-height:1.6;margin-bottom:0;}
+  /* feature tags — neutral pill style */
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+  .chip{font-size:.74rem;font-weight:500;padding:5px 11px;border-radius:999px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:var(--muted);}
+  /* use cases — simple divider, no box */
+  .usecase{margin-top:auto;padding-top:16px;margin-top:18px;
+    border-top:1px solid rgba(255,255,255,.08);}
+  .usecase .ulabel{font-size:.6rem;letter-spacing:.22em;font-weight:600;
+    color:var(--muted-2);text-transform:uppercase;margin-bottom:8px;}
+  .chips.plain .chip{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);
+    color:var(--muted-2);}
+  .chips.plain .chip:hover{background:rgba(255,255,255,.1);color:var(--text);}
 
   /* ---------- packages ---------- */
   .pkg{display:flex;flex-direction:column;}
@@ -245,10 +239,6 @@
   .gallery-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
     scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px;}
   .gallery-track::-webkit-scrollbar{display:none;}
-  .gallery-track::before,.gallery-track::after{content:"";position:absolute;top:0;bottom:4px;
-    z-index:2;width:80px;pointer-events:none;}
-  .gallery-track::before{left:0;background:linear-gradient(to right,var(--bg),transparent);}
-  .gallery-track::after{right:0;background:linear-gradient(to left,var(--bg),transparent);}
   .gallery-item{flex:none;width:clamp(220px,30vw,340px);aspect-ratio:4/3;scroll-snap-align:start;
     border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
     background:rgba(255,255,255,.04);}
@@ -478,7 +468,7 @@
       <p class="s-lead">A curated library of consciousness-expanding experiences using a wide range of mediums: VR, MR, biofeedback, photic stimulation, and more. Ready to license.</p>
     </div>
     <div class="grid g-4 rgroup">
-      <article class="card cat" style="--ac:#4cdcef;">
+      <article class="card cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
         <h3>Perceptual Expansion</h3>
         <p>Experiences that deepen perception and open the senses.</p>
@@ -487,7 +477,7 @@
           <div class="chips plain"><span class="chip">Festivals</span><span class="chip">Galleries</span><span class="chip">Retreats</span><span class="chip">Arcades</span></div>
         </div>
       </article>
-      <article class="card cat" style="--ac:#5fdfa6;">
+      <article class="card cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h3l3-7 5 18 3-11h4"/></svg></div>
         <h3>State Shifting</h3>
         <p>Tools that shift consciousness through sound, light, and breath.</p>
@@ -496,7 +486,7 @@
           <div class="chips plain"><span class="chip">Retreats</span><span class="chip">Wellness</span><span class="chip">Spas</span><span class="chip">Labs</span></div>
         </div>
       </article>
-      <article class="card cat" style="--ac:#e562a4;">
+      <article class="card cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></div>
         <h3>Psychedelic Support</h3>
         <p>Tools for the psychedelic arc, including harm reduction.</p>
@@ -505,7 +495,7 @@
           <div class="chips plain"><span class="chip">Clinics</span><span class="chip">Therapy</span><span class="chip">Retreats</span><span class="chip">Research</span></div>
         </div>
       </article>
-      <article class="card cat" style="--ac:#b49bf8;">
+      <article class="card cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3a5 5 0 0 0-5 5c0 1.6.8 2.7 1.5 3.7.5.8.5 1.8.5 2.8M12 3a5 5 0 0 1 5 5c0 1.6-.8 2.7-1.5 3.7-.5.8-.5 1.8-.5 2.8M9 16.5h6M10 20h4"/></svg></div>
         <h3>Mind Training</h3>
         <p>Practices that turn states into lasting traits.</p>
