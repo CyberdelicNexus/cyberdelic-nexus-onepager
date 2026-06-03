@@ -195,6 +195,7 @@
   .ic svg{width:22px;height:22px;}
 
   /* ---------- category cards ---------- */
+  .cat{display:flex;flex-direction:column;gap:4px;}
   .cat::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
     background:linear-gradient(90deg,var(--ac),transparent);}
   .cat .ic{background:color-mix(in srgb,var(--ac) 17%,transparent);
@@ -205,11 +206,17 @@
   .chip{font-size:.76rem;font-weight:500;padding:6px 12px;border-radius:999px;
     background:color-mix(in srgb,var(--ac) 14%,transparent);
     border:1px solid color-mix(in srgb,var(--ac) 30%,transparent);color:#f3eefc;}
-  .usecase{margin-top:15px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.12);}
-  .usecase .ulabel{font-size:.63rem;letter-spacing:.2em;font-weight:600;
-    color:var(--muted-2);text-transform:uppercase;margin-bottom:8px;}
-  .chips.plain .chip{background:rgba(255,255,255,.05);
-    border-color:rgba(255,255,255,.12);color:var(--muted);}
+  .usecase{margin-top:auto;padding:14px 16px;border-radius:13px;
+    background:color-mix(in srgb,var(--ac) 10%,rgba(0,0,0,.28));
+    border:1px solid color-mix(in srgb,var(--ac) 28%,transparent);}
+  .usecase .ulabel{font-size:.62rem;letter-spacing:.22em;font-weight:700;
+    color:var(--ac);text-transform:uppercase;margin-bottom:10px;opacity:.9;}
+  .chips.plain .chip{
+    background:color-mix(in srgb,var(--ac) 18%,rgba(0,0,0,.2));
+    border-color:color-mix(in srgb,var(--ac) 44%,transparent);
+    color:#fff;font-weight:600;}
+  .chips.plain .chip:hover{
+    background:color-mix(in srgb,var(--ac) 32%,transparent);}
 
   /* ---------- packages ---------- */
   .pkg{display:flex;flex-direction:column;}
@@ -454,7 +461,7 @@
       <h2 class="s-title">The <span class="g">Cyberdelic Menu</span></h2>
       <p class="s-lead">A curated library of consciousness-expanding experiences using a wide range of mediums: VR, MR, biofeedback, photic stimulation, and more. Ready to license.</p>
     </div>
-    <div class="grid g-4 rgroup">
+    <div class="grid g-2 rgroup">
       <article class="card cat" style="--ac:#4cdcef;">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
         <h3>Perceptual Expansion</h3>
