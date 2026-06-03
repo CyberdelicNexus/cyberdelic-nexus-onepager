@@ -4,7 +4,7 @@ Mobile-responsive marketing one-pager for Cyberdelic Nexus, pitching curated imm
 
 ## Entry point
 
-`cyberdelic-nexus-onepager.html` — single self-contained page (HTML + inline CSS + minimal vanilla JS). Open it directly in a browser, or serve the folder with a local static server (e.g. `python3 -m http.server`) so the QR code CDN script loads cleanly.
+`index.html` — single self-contained page (HTML + inline CSS + minimal vanilla JS). Open it directly in a browser, or serve the folder with a local static server (e.g. `python3 -m http.server`) so the QR code CDN script loads cleanly.
 
 ## File layout
 
@@ -70,7 +70,7 @@ Every "Book a call", "Enquire", and package CTA points at Calendly. Package "Enq
 
 - **Press logos for Featured-in.** Currently styled monochrome wordmarks. To upgrade: drop logo files for The Guardian, French Culture Radio, RTE Radio, Freethink, Frontiers, Science Open, National Institute of Health and British Computer Society into this folder and replace each `.lw-item` span in the HTML with an `<img>` of the matching logo.
 - **Optional reorg.** Move PNGs into `assets/images/` and update relative paths if the flat layout becomes unwieldy.
-- **Optional rename.** `cyberdelic-nexus-onepager.html` → `index.html` for web convention.
+- ~~**Optional rename.**~~ Renamed to `index.html` (required for GitHub Pages).
 - **Optional hosting.** No server logic. Drop the folder on any static host (Netlify, Vercel, GitHub Pages, S3, Cloudflare Pages).
 
 ## Quick recipes
