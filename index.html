@@ -196,18 +196,23 @@
 
   /* ---------- category cards ---------- */
   #offer .grid{align-items:stretch;}
-  .card.cat{display:flex;flex-direction:column;gap:0;padding:28px;}
-  /* no top bar, no accent header */
-  .cat .ic{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);margin-bottom:20px;}
-  .cat .ic svg{stroke:rgba(255,255,255,.7);}
+  .card.cat{display:flex;flex-direction:column;gap:0;padding:28px;
+    border-top-color:color-mix(in srgb,var(--ac) 55%,rgba(255,255,255,.11));
+    background:
+      radial-gradient(ellipse 90% 55% at 50% -10%,color-mix(in srgb,var(--ac) 14%,transparent),transparent 70%),
+      var(--glass);}
+  .cat .ic{background:color-mix(in srgb,var(--ac) 18%,transparent);
+    border-color:color-mix(in srgb,var(--ac) 40%,transparent);margin-bottom:20px;}
+  .cat .ic svg{stroke:var(--ac);}
   .cat h3{color:var(--text);font-size:1.08rem;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;}
-  .cat>p{color:var(--muted);font-size:.92rem;font-weight:300;line-height:1.6;margin-bottom:0;}
-  /* feature tags — neutral pill style */
+  .cat>p{color:var(--muted);font-size:.92rem;font-weight:300;line-height:1.6;}
+  /* feature chips — light accent tint */
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
   .chip{font-size:.74rem;font-weight:500;padding:5px 11px;border-radius:999px;
-    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:var(--muted);}
-  /* use cases — simple divider, no box */
-  .usecase{margin-top:auto;padding-top:16px;margin-top:18px;
+    background:color-mix(in srgb,var(--ac) 11%,transparent);
+    border:1px solid color-mix(in srgb,var(--ac) 26%,transparent);color:var(--text);}
+  /* use cases — thin divider, no box */
+  .usecase{margin-top:18px;padding-top:16px;
     border-top:1px solid rgba(255,255,255,.08);}
   .usecase .ulabel{font-size:.6rem;letter-spacing:.22em;font-weight:600;
     color:var(--muted-2);text-transform:uppercase;margin-bottom:8px;}
@@ -468,7 +473,7 @@
       <p class="s-lead">A curated library of consciousness-expanding experiences using a wide range of mediums: VR, MR, biofeedback, photic stimulation, and more. Ready to license.</p>
     </div>
     <div class="grid g-4 rgroup">
-      <article class="card cat">
+      <article class="card cat" style="--ac:#4cdcef;">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
         <h3>Perceptual Expansion</h3>
         <p>Experiences that deepen perception and open the senses.</p>
@@ -477,7 +482,7 @@
           <div class="chips plain"><span class="chip">Festivals</span><span class="chip">Galleries</span><span class="chip">Retreats</span><span class="chip">Arcades</span></div>
         </div>
       </article>
-      <article class="card cat">
+      <article class="card cat" style="--ac:#5fdfa6;">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h3l3-7 5 18 3-11h4"/></svg></div>
         <h3>State Shifting</h3>
         <p>Tools that shift consciousness through sound, light, and breath.</p>
@@ -486,7 +491,7 @@
           <div class="chips plain"><span class="chip">Retreats</span><span class="chip">Wellness</span><span class="chip">Spas</span><span class="chip">Labs</span></div>
         </div>
       </article>
-      <article class="card cat">
+      <article class="card cat" style="--ac:#e562a4;">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></div>
         <h3>Psychedelic Support</h3>
         <p>Tools for the psychedelic arc, including harm reduction.</p>
@@ -495,7 +500,7 @@
           <div class="chips plain"><span class="chip">Clinics</span><span class="chip">Therapy</span><span class="chip">Retreats</span><span class="chip">Research</span></div>
         </div>
       </article>
-      <article class="card cat">
+      <article class="card cat" style="--ac:#b49bf8;">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3a5 5 0 0 0-5 5c0 1.6.8 2.7 1.5 3.7.5.8.5 1.8.5 2.8M12 3a5 5 0 0 1 5 5c0 1.6-.8 2.7-1.5 3.7-.5.8-.5 1.8-.5 2.8M9 16.5h6M10 20h4"/></svg></div>
         <h3>Mind Training</h3>
         <p>Practices that turn states into lasting traits.</p>
@@ -584,14 +589,18 @@
     </div>
     <div class="gallery reveal">
       <div class="gallery-track" id="galleryTrack">
-        <div class="gallery-item"><img src="gallery/01.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>01</div>'"></div>
-        <div class="gallery-item"><img src="gallery/02.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>02</div>'"></div>
-        <div class="gallery-item"><img src="gallery/03.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>03</div>'"></div>
-        <div class="gallery-item"><img src="gallery/04.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>04</div>'"></div>
-        <div class="gallery-item"><img src="gallery/05.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>05</div>'"></div>
-        <div class="gallery-item"><img src="gallery/06.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>06</div>'"></div>
-        <div class="gallery-item"><img src="gallery/07.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>07</div>'"></div>
-        <div class="gallery-item"><img src="gallery/08.jpg" loading="lazy" decoding="async" alt="Cyberdelic Showcase" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>08</div>'"></div>
+        <div class="gallery-item"><img src="gallery/01.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/02.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/03.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/04.JPG"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/05.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/06.jpeg"  loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/07.png"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/08.png"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/09.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/10.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/11.jpg"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
+        <div class="gallery-item"><img src="gallery/12.png"   loading="lazy" decoding="async" alt="Cyberdelic Showcase"></div>
       </div>
       <div class="gallery-arrows">
         <button class="gal-arrow" id="galPrev" aria-label="Previous photos">
