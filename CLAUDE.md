@@ -2,9 +2,13 @@
 
 Mobile-responsive marketing one-pager for Cyberdelic Nexus, pitching curated immersive experiences to events, venues, clinics, retreats and wellness centers.
 
-## Entry point
+## Moved to the main site
 
-`index.html` — single self-contained page (HTML + inline CSS + minimal vanilla JS). Open it directly in a browser, or serve the folder with a local static server (e.g. `python3 -m http.server`) so the QR code CDN script loads cleanly.
+The one-pager now lives at https://www.cyberdelic.nexus/labs/services (Cyberdelic Nexus Core, decision D278). `index.html` only redirects there, so flyer QR codes and old links keep working. The original page is kept as `original.html` for reference; edit the site's version, not this one.
+
+## Entry point (original)
+
+`original.html` — single self-contained page (HTML + inline CSS + minimal vanilla JS). Open it directly in a browser, or serve the folder with a local static server (e.g. `python3 -m http.server`) so the QR code CDN script loads cleanly.
 
 ## File layout
 
